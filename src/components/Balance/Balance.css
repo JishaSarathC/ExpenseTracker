@@ -1,0 +1,26 @@
+.balance{
+    width:344px;
+    height:144px;
+    Top:140px;
+    Left:90px;
+    border-radius: 15px;
+    background-color: #9B9B9B;
+    display:flex;
+   
+       
+}
+.Buton{
+    background-color: #89E148;
+}
+.name{
+    font-family: Ubuntu;
+font-weight: 400;
+font-style: Regular;
+font-size: 30px;
+
+line-height: 100%;
+letter-spacing: 0%;
+
+
+
+}

@@ -1,0 +1,22 @@
+.expence{
+    width: 344px;
+height: 144px;
+top: 140px;
+left: 494.59px;
+
+opacity: 1;
+border-radius: 15px;
+
+}
+.btn{
+    background-color: #FF4747;
+}
+Typography{
+    font-family: Ubuntu;
+font-weight: 400;
+font-style: Regular;
+font-size: 30px;
+
+line-height: 100%;
+letter-spacing: 0%;
+}
