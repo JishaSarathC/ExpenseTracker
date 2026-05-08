@@ -13,6 +13,7 @@ import { MdOutlineEdit } from "react-icons/md";
   Entertainment:  <IoIosFootball size={24}/>
 }
 export default function Transactions({expenses,isEmpty,onDelete,onEdit}) {
+  //console.log(isEmpty,"test")
   if(isEmpty){
     return <p className="no-transactions">No transactions!</p>
   }
@@ -25,6 +26,7 @@ export default function Transactions({expenses,isEmpty,onDelete,onEdit}) {
             <span className="categoryicon">
              {categoryIcon[exp.category]}
              </span>
+             
             
             <div className="items">
             <p>{exp.category} </p>

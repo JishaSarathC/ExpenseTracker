@@ -24,8 +24,8 @@ export default function TinyBarChart({expenses}){
     
       <ResponsiveContainer width={400} height={200}>
         <BarChart className="bard" data={barData} layout="vertical" >
-          <XAxis type="number" axisLine={false} display="none" />
-          <YAxis dataKey="name" type="category" axisLine={false}  width={130}/>
+          <XAxis type="number" axisLine={false} tick= {false} />
+          <YAxis dataKey="name" type="category" axisLine={false}  width={100}/>
           <Tooltip />
           <Bar dataKey="amount" fill="#8784D2" barSize={26}/>
         </BarChart>

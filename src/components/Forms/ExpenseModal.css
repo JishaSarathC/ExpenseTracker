@@ -1,0 +1,66 @@
+.expense{
+   width: 460;
+height: 198;
+top: 347px;
+left: 401px;
+border-radius: 15px;
+
+opacity: 1;
+
+}
+.title{
+    width: 223;
+height: 51;
+top: 347px;
+left: 401px;
+border-radius: 15px;
+border:0cm;
+opacity: 1;
+
+}
+.price{
+    width: 223;
+height: 51;
+top: 347px;
+left: 638px;
+border-radius: 15px;
+border:0cm;
+
+opacity: 1;
+
+}
+.category{
+   width: 223;
+height: 51;
+top: 420px;
+left: 401px;
+border-radius: 15px;
+border:0cm;
+opacity: 1;
+margin:2px;
+
+
+}
+.date{
+width: 223;
+height: 51;
+top: 420px;
+left: 638px;
+border-radius: 15px;
+border:0cm;
+opacity: 1;
+margin:10px;
+
+}
+.add{
+    background-color:  #F4BB4A;
+}
+.cancel{
+    width: 112;
+height: 51;
+top: 494px;
+left: 640px;
+border-radius: 15px;
+opacity: 1;
+
+}

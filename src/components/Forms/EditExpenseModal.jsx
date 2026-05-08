@@ -1,4 +1,4 @@
-export default function ExpenseForm({
+export default function ExpenseModal({
   title,
   setTitle,
   category,
@@ -40,8 +40,8 @@ export default function ExpenseForm({
         onChange={(e) => setDate(e.target.value)}
       />
       <div style={{ marginTop: "12px" }}>
-        <button type="submit">{isEditing ? "UpdateExpense" : "Add Expense"}</button>
-        <button onClick={onCancel} style={{ marginLeft: "8px" }}>
+        <button type="submit">{isEditing? "UpdateExpense" : "Add Expense"}</button>
+        <button type="button" onClick={onCancel} style={{ marginLeft: "8px" }}>
           Cancel
         </button>
       </div>

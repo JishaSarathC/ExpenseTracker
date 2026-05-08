@@ -1,22 +1,23 @@
 
 .transactions-list {
   display: flex;
-  flex-direction: column;
+  flex-direction:column;
   
   background-color: #FFFFFF;
-  
-  width:500px;
-  height:100px;
+  width:100%;
+  max-width:700px;
+ 
   border-radius: 15px;
   
 }
 
 .transaction {
   display: flex;
+ 
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #9b9b9b;
 }
 
 .left {
@@ -32,6 +33,8 @@
 .categoryicon {
    font-size: 20px;
   color:#000000;
+  background-color:#9b9b9b ;
+  border-radius: 25px;
 }
 .items{
   color:#000000;
@@ -52,12 +55,13 @@
 .amount {
   font-weight: bold;
   color: #F4BB4A;
+  margin-right:auto;
 }
 .delete{
-color:#ff3838
+background-color:#ff3838;
 }
 .edit{
-color:#f4bb4a
+background-color:#f4bb4a;
 }
 
 .actions {
@@ -68,8 +72,38 @@ color:#f4bb4a
 .no-transactions {
   text-align: center;
   padding: 20px;
-  color: #888;
+  color: black;
   font-weight: 500;
 }
+.transaction:last-child{
+  border-bottom: none;
+}
+@media (max-width:768px){
+  .transactions-list{
+    flex-direction: column;
+    width:100%;
+  }
+  .transaction{
+   
+    align-items:flex-start;
+    gap:10px;
+  }
+  .left{
+    width:100%;
+  }
+  .amount{
+    margin-right: 0;
+  }
 
+  .actions{
+    width:100%;
+    justify-content: flex-end;
+  }
+
+  .edit,
+  .delete{
+    padding:8px;
+    border-radius: 8px;
+  }
+}
 

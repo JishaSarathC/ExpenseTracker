@@ -1,4 +1,5 @@
-import Tracker from "./Pages/Tracker.jsx";
+import HomePage from "./Pages/HomePage.jsx";
+
 
 
 
@@ -6,7 +7,7 @@ function App() {
  
   return (
     <div>
-      <Tracker />
+      <HomePage />
      
     </div>
     )

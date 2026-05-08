@@ -3,13 +3,7 @@ import  "./Modal.css";
 
 const Modal = ({ isOpen, children, title }) => {
   if (!isOpen) return null;
-  const customStyles={
-    content:{
-      width:"95%",
-      Radius:"15px",
-      background:"#FFFFFF",
-    }
-  };
+  
 
   return (
     <div className="overlay">

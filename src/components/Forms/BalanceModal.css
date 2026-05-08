@@ -1,0 +1,41 @@
+.BalanceModal{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    background-color: #EFEFEF;
+    
+}
+.balanceinput{
+    width: 217;
+height: 51;
+top: 377px;
+left: 401px;
+border-radius: 15px;
+border:0cm;
+opacity: 1;
+
+
+}
+.add{
+    width: 145;
+height: 51;
+top: 378px;
+left: 630px;
+border-radius: 15px;
+border:0cm;
+
+opacity: 1;
+
+    background-color: #F4BB4A;
+}
+.cancel{
+    width: 112;
+height: 51;
+top: 379px;
+left: 791px;
+border-radius: 15px;
+border:0cm;
+
+opacity: 1;
+
+}
