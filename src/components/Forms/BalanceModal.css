@@ -1,41 +1,41 @@
-.BalanceModal{
-    display:flex;
-    flex-direction:row;
-    justify-content: space-between;
-    background-color: #EFEFEF;
-    
+
+.BalanceModal {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  background-color: #EFEFEF;
+  box-sizing: border-box;
 }
-.balanceinput{
-    width: 217;
-height: 51;
-top: 377px;
-left: 401px;
-border-radius: 15px;
-border:0cm;
-opacity: 1;
 
-
+.balanceinput {
+  width: 100%;
+  height: 50px;
+  padding: 12px;
+  border: 1px solid #CCCCCC;
+  border-radius: 10px;
+  box-sizing: border-box;
 }
-.add{
-    width: 145;
-height: 51;
-top: 378px;
-left: 630px;
-border-radius: 15px;
-border:0cm;
 
-opacity: 1;
-
-    background-color: #F4BB4A;
+.balance-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
 }
-.cancel{
-    width: 112;
-height: 51;
-top: 379px;
-left: 791px;
-border-radius: 15px;
-border:0cm;
 
-opacity: 1;
+.balance-actions .add,
+.balance-actions .cancel {
+  min-width: 110px;
+  height: 45px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
 
+.balance-actions .add {
+  background-color: #F4BB4A;
+}
+
+.balance-actions .cancel {
+  background-color: #CCCCCC;
 }

@@ -19,11 +19,12 @@ export default function BalanceModal({
         placeholder="Income Amount"
         value={balanceAmount}
         onChange={(e) => setBalanceAmount(e.target.value)}
+        autoComplete= "off"
       />
 
-      <div >
+      <div className="balance-actions">
         <button className="add"  type="submit" >Add Balance</button>
-        <button className="cancel" type="button" onClick={onCancel} style={{ marginLeft: "8px" }}>
+        <button className="cancel" type="button" onClick={onCancel} >
           Cancel
         </button>
       </div>

@@ -1,24 +1,39 @@
-import React from 'react'
 
-export default function Pagination ({totalItems,itemsPerPage,currentPage,setCurrentPage}) {
-    const totalPages=Math.ceil(totalItems/itemsPerPage);
+import React from 'react';
+import { VscArrowRight, VscArrowLeft } from "react-icons/vsc";
+import "./pagination.css";
 
-  return (
-    <div className="pagination">
-         <button
-         disabled={currentPage===1}
-         onClick={()=>setCurrentPage(currentPage-1)}
-         >
-            Prev
-         </button>
-         <span style={{backgroundColor:"green"}}>{currentPage}</span>
+export default function Pagination({
+    totalItems,
+    itemsPerPage,
+    currentPage,
+    setCurrentPage
+}) {
+    const totalPages = Math.ceil(totalItems / itemsPerPage);
 
-         <button 
-         disabled={currentPage===totalPages}
-         onClick={()=>setCurrentPage(currentPage+1)}
-         >
-            Next
-         </button>
-    </div>
-  );
+    return (
+        <div className="pagination">
+
+            <button
+                className="button1"
+                disabled={currentPage === 1}
+                onClick={() => setCurrentPage(currentPage - 1)}
+            >
+                <VscArrowLeft />
+            </button>
+
+            <span className="page-number">
+                {currentPage}
+            </span>
+
+            <button
+                className="button2"
+                disabled={currentPage === totalPages}
+                onClick={() => setCurrentPage(currentPage + 1)}
+            >
+                <VscArrowRight />
+            </button>
+
+        </div>
+    );
 }

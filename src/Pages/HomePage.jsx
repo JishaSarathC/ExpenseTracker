@@ -1,7 +1,8 @@
 import { useState , useEffect} from "react";
 import "./HomePage.css";
-import Balans from "../components/Balance/Balans.jsx"
-import Expens from "../components/Expences/Expens.jsx" ;
+//import Balans from "../components/Balance/Balans.jsx"
+//import Expens from "../components/Expences/Expens.jsx" ;
+import SummaryCard from "../components/SummaryCard/SummaryCard.jsx";
 import ExpensePieChart from "../components/Piechart/ExpensePieChart.jsx";
 import Transactions from "../components/Transactions/Transactions.jsx"
 import Modal from "../components/Modals/Modal.jsx";
@@ -26,7 +27,7 @@ export default function HomePage(){
     const [openBalanceModal,setOpenBalanceModal]=useState(false);
     const [openExpenseModal, setOpenExpenseModal]=useState(false);
     const [openEditModal, setOpenEditModal]=useState(false);
-    const [selectedExpense,setSelectedExpense]=useState(null);
+    
     
     const [editingExpense, setEditingExpense]=useState(null);
     const [title, setTitle]=useState("");
@@ -102,7 +103,7 @@ export default function HomePage(){
     
 
     const handleEdit=(expense)=>{
-       setSelectedExpense(expense);
+    
        setTitle(expense.title);
        setCategory(expense.category);
        setAmount(expense.amount);
@@ -113,11 +114,17 @@ export default function HomePage(){
     };
 
     
-    const handleOpenExpenseModal=()=>{
-        setOpenExpenseModal(true);
-    }
+   const handleOpenExpenseModal = () => {
+    setTitle("");
+    setAmount("");
+    setCategory("");
+    setDate("");
+    setEditingExpense(null);
+    setOpenExpenseModal(true);
+};
 
     const handleOpenBalanceModal=()=>{
+        setBalanceAmount("");
         setOpenBalanceModal(true);
     }
     
@@ -199,12 +206,24 @@ export default function HomePage(){
             <div><h1 className="heading">Expense Tracker</h1></div>
             <div className="contents">
                 <div className="content1">
-                   <Balans balance={balance} openBalanceModal={handleOpenBalanceModal}
-                              />  
+                   <SummaryCard
+    title="Wallet Balance"
+    amount={balance}
+    buttonText="+ Add Balance"
+    onButtonClick={handleOpenBalanceModal}
+    amountColor="#89E148"
+    buttonColor="#89E148"
+  />  
                 </div>
                  <div className="content2">
-                    <Expens totalExpenses={expenses} 
-                    openExpenseModal={handleOpenExpenseModal}/>
+                    <SummaryCard
+    title="Expenses"
+    amount={expenses}
+    buttonText="+ Add Expense"
+    onButtonClick={handleOpenExpenseModal}
+    amountColor="#F4BB4A"
+    buttonColor="#FF3838"
+  />
                  </div>
                  <div className="piechart"> <ExpensePieChart expenseList={expenseList}
                 
@@ -224,12 +243,12 @@ export default function HomePage(){
             onEdit={handleEdit}
            
             
-            /></div>
-             <Pagination
+            /><Pagination
             totalItems={expenseList.length}
             itemPerPage={itemsPerPage}
             currentPage={currentPage}
             setCurrentPage={setCurrentPage}/></div>
+             </div>
             
             <div><h3>Top Expenses</h3>
             <div className="chart">
@@ -241,7 +260,8 @@ export default function HomePage(){
             </div>
             </div>
            </div>
-           <Modal isOpen={openBalanceModal} title="Add Balance">
+           <Modal isOpen={openBalanceModal} title="Add Balance"
+           onClose={()=> setOpenBalanceModal(false)}>
             <BalanceModal
              balanceAmount={balanceAmount}
              setBalanceAmount={setBalanceAmount}
@@ -249,7 +269,10 @@ export default function HomePage(){
              onCancel={()=>setOpenBalanceModal(false)}
             />
             </Modal>
-            <Modal isOpen={openExpenseModal} title="Add Expense">
+            <Modal isOpen={openExpenseModal} 
+            title="Add Expense"
+            onClose={() => setOpenExpenseModal(false)}
+            >
             <ExpenseModal
             title={title}
             setTitle={setTitle}
@@ -264,7 +287,9 @@ export default function HomePage(){
             isEditing={false}
             /> 
             </Modal>
-            <Modal isOpen={openEditModal} title="Edit Expense">
+            <Modal isOpen={openEditModal} 
+            title="Edit Expense"
+            onClose={() => setOpenEditModal(false)}>
                 <ExpenseModal
                 title={title}
                 setTitle={setTitle}

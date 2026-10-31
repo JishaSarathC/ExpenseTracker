@@ -24,15 +24,20 @@ export default function ExpenseModal({
         placeholder="Title"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
+        autoComplete="off"
       />
       <input className="price"
         type="number"
         placeholder="Price"
         value={amount}
         onChange={(e) => setAmount(e.target.value)}
+        autoComplete="off"
       />
 
-      <select className="category" value={category} onChange={(e) => setCategory(e.target.value)}>
+      <select className="category" 
+      value={category} 
+      onChange={(e) => setCategory(e.target.value)}
+      >
         <option value="">Select Category</option>
         <option value="Food">Food</option>
         <option value="Travel">Travel</option>
@@ -44,9 +49,12 @@ export default function ExpenseModal({
         value={date}
         onChange={(e) => setDate(e.target.value)}
       />
-      <div style={{ marginTop: "12px" }}>
+      <div className="expense-actions">
         <button className="add" type="submit">{isEditing ? "UpdateExpense" : "Add Expense"}</button>
-        <button  className="cancel" onClick={onCancel} style={{ marginLeft: "8px" }}>
+        <button  className="cancel" 
+        type="button" 
+        onClick={onCancel} 
+        >
           Cancel
         </button>
       </div>

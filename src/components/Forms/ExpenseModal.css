@@ -1,66 +1,61 @@
-.expense{
-   width: 460;
-height: 198;
-top: 347px;
-left: 401px;
-border-radius: 15px;
 
-opacity: 1;
 
+.expense {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  width: 100%;
+  box-sizing: border-box;
 }
-.title{
-    width: 223;
-height: 51;
-top: 347px;
-left: 401px;
-border-radius: 15px;
-border:0cm;
-opacity: 1;
 
+.expense .title,
+.expense .price,
+.expense .category,
+.expense .date {
+  width: 100%;
+  height: 50px;
+  padding: 0 12px;
+  border: 1px solid #CCCCCC;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 14px;
+  background-color: #FFFFFF;
 }
-.price{
-    width: 223;
-height: 51;
-top: 347px;
-left: 638px;
-border-radius: 15px;
-border:0cm;
 
-opacity: 1;
-
+.expense-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
 }
-.category{
-   width: 223;
-height: 51;
-top: 420px;
-left: 401px;
-border-radius: 15px;
-border:0cm;
-opacity: 1;
-margin:2px;
 
-
+.expense-actions .add,
+.expense-actions .cancel {
+  min-width: 110px;
+  height: 45px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
 }
-.date{
-width: 223;
-height: 51;
-top: 420px;
-left: 638px;
-border-radius: 15px;
-border:0cm;
-opacity: 1;
-margin:10px;
 
+.expense-actions .add {
+  background-color: #F4BB4A;
+  color: #222222;
 }
-.add{
-    background-color:  #F4BB4A;
-}
-.cancel{
-    width: 112;
-height: 51;
-top: 494px;
-left: 640px;
-border-radius: 15px;
-opacity: 1;
 
+.expense-actions .cancel {
+  background-color: #CCCCCC;
+  color: #333333;
+}
+
+@media (max-width: 480px) {
+  .expense {
+    grid-template-columns: 1fr;
+  }
+
+  .expense-actions {
+    grid-column: 1;
+    flex-wrap: wrap;
+  }
 }
