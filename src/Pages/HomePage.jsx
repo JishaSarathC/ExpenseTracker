@@ -41,7 +41,7 @@ export default function HomePage(){
     const endIndex=startIndex+itemsPerPage;
 
     const currentTransactions=expenseList.slice(startIndex,endIndex);
-    const enqueueSnackbar=useSnackbar();
+    const {enqueueSnackbar } = useSnackbar();
     useEffect(()=>{
     const storedBalance= localStorage.getItem("balance");
     
@@ -158,10 +158,10 @@ export default function HomePage(){
        };
        setExpenseList((prev)=>[...prev,newExpense]);
        setBalance((prev)=> prev-Number(amount));
-       setTitle(""),
-       setAmount(""),
-       setCategory(""),
-       setDate(""),
+       setTitle("");
+       setAmount("");
+       setCategory("");
+       setDate("");
        setOpenExpenseModal(false);
     };
     

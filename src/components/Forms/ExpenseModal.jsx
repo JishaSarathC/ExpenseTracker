@@ -54,7 +54,7 @@ export default function ExpenseModal({
         onChange={(e) => setDate(e.target.value)}
       />
       <div className="expense-actions">
-        <button className="add" name = "submit" type="submit">{isEditing ? "UpdateExpense" : "Add Expense"}</button>
+        <button className="add" name = "submit" type="submit">{isEditing ? "Update Expense" : "Add Expense"}</button>
         <button  className="cancel" 
         type="button" 
         onClick={onCancel} 
