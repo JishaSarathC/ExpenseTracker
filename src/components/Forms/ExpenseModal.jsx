@@ -28,6 +28,7 @@ export default function ExpenseModal({
         autoComplete="off"
       />
       <input className="price"
+        name="price"
         type="number"
         placeholder="Price"
         value={amount}
