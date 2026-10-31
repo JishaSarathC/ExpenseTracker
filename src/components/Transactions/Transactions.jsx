@@ -29,7 +29,7 @@ export default function Transactions({expenses,isEmpty,onDelete,onEdit}) {
              
             
             <div className="items">
-            <p>{exp.category} </p>
+            <p>{exp.title} </p>
             <p> {exp.date}</p>
             </div>
           </div>

@@ -14,7 +14,7 @@ export default function SummaryCard({
 
       <h3>
         {title}: <span style={{ color: amountColor }}>
-          ₹{Number(amount).toLocaleString("en-IN")}
+          ₹{Number(amount)}
         </span>
       </h3>
 
