@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { VscArrowRight, VscArrowLeft } from "react-icons/vsc";
-import "./pagination.css";
+import "./Pagination.css";
 
 export default function Pagination({
     totalItems,
