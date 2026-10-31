@@ -14,6 +14,7 @@ export default function ExpenseModal({
   return (
     <form onSubmit={onSubmit}>
       <input
+      //name="title"
         type="text"
         placeholder="Title"
         value={title}

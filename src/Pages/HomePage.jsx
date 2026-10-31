@@ -209,7 +209,7 @@ export default function HomePage(){
                    <SummaryCard
     title="Wallet Balance"
     amount={balance}
-    buttonText="+ Add Balance"
+    buttonText="+ Add Income"
     onButtonClick={handleOpenBalanceModal}
     amountColor="#89E148"
     buttonColor="#89E148"
