@@ -37,6 +37,7 @@ export default function ExpenseModal({
       />
 
       <select className="category" 
+      name="category"
       value={category} 
       onChange={(e) => setCategory(e.target.value)}
       >
@@ -47,12 +48,13 @@ export default function ExpenseModal({
       </select>
       
       <input className="date"
+      name="date"
         type="date"
         value={date}
         onChange={(e) => setDate(e.target.value)}
       />
       <div className="expense-actions">
-        <button className="add" type="submit">{isEditing ? "UpdateExpense" : "Add Expense"}</button>
+        <button className="add" name = "submit" type="submit">{isEditing ? "UpdateExpense" : "Add Expense"}</button>
         <button  className="cancel" 
         type="button" 
         onClick={onCancel} 
