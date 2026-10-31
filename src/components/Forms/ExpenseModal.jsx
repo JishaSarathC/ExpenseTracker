@@ -20,7 +20,7 @@ export default function ExpenseModal({
     <form className="expense" onSubmit={handleSubmit}>
     
       <input className="title"
-      //name="title"
+      name="title"
         type="text"
         placeholder="Title"
         value={title}
